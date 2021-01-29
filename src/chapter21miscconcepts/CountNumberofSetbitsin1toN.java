@@ -24,6 +24,6 @@ public class CountNumberofSetbitsin1toN {
 			     j = j & (j - 1); 
 			}
 		}
-		return count;		
+		return (int)count;
 	}
 }
