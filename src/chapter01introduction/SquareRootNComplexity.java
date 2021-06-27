@@ -16,7 +16,6 @@ package chapter01introduction;
 
 public class SquareRootNComplexity {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int n = 6;
 		System.out.println(squareRootN(n));
 	}

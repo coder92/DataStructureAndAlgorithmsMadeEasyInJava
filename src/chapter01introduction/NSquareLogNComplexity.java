@@ -17,7 +17,6 @@ package chapter01introduction;
 public class NSquareLogNComplexity {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int n = 9;
 		System.out.println(nSquareLogN(n));
 		System.out.println(nSquareLogN2(n));
