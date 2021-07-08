@@ -28,6 +28,15 @@ public class GraphAlgo {
     public void add(int v1, int v2){
       adjList[v1].add(v2);
     }
+
+    public Integer findRoute(int v1, int v2){
+      for (Integer v : adjList[v1]) {
+        if(v==v2){
+          return 1;
+        }
+      }
+      return 0;
+    }
   }
 
   static class DFS{

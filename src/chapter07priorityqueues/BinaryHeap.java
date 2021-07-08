@@ -15,6 +15,11 @@
 package chapter07priorityqueues;
 
 public class BinaryHeap<AnyType extends Comparable<? super AnyType>>{
+
+	private static final int DEFAULT_CAPACITY = 10;
+	private int currentSize;      // Number of elements in heap
+	private AnyType [ ] A; // The heap array
+
 	// Construct the binary heap.
 	public BinaryHeap( ){
 		this( DEFAULT_CAPACITY );
@@ -28,7 +33,6 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>>{
 	}
 
 	// Construct the binary heap given an array of items.
-	@SuppressWarnings("unchecked")
 	public BinaryHeap( AnyType [ ] items ){
 		currentSize = items.length;
 		A = (AnyType[]) new Comparable[ ( currentSize + 2 ) * 11 / 10 ];
@@ -97,10 +101,9 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>>{
 		currentSize = 0;
 	}
 
-	private static final int DEFAULT_CAPACITY = 10;
 
-	private int currentSize;      // Number of elements in heap
-	private AnyType [ ] A; // The heap array
+
+
 
 	// Internal method to percolate down in the heap.
 	private void percolateDown( int hole ){
